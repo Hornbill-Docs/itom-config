@@ -4,7 +4,7 @@
   "description": "ITOM configuration documentation",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "hdocs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "audience": [
     "public"
   ],
@@ -37,11 +37,11 @@
          ]
       },   
       {
-        "text": "Configuration",
+        "text": "Customize",
         "items": [
           {
            "text": "Translations",
-           "link": "itom-config/configuration/translations"
+           "link": "itom-config/customize/translations"
           }
         ]
       },
