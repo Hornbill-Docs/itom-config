@@ -4,7 +4,7 @@
   "description": "ITOM configuration documentation",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "hdocs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "audience": [
     "public"
   ],
@@ -22,7 +22,47 @@
             "link": "itom-config/index"
           }
         ]
-      }
+      },  
+      {
+        "text": "ITOM Setup",
+        "items": [
+          {
+            "text": "Users",
+            "link": "itom-config/setup/users"
+          },
+          {
+              "text": "Roles",
+              "link": "itom-config/setup/roles"
+          }
+         ]
+      },   
+      {
+        "text": "Configuration",
+        "items": [
+          {
+           "text": "Translations",
+           "link": "itom-config/configuration/translations"
+          }
+        ]
+      },
+      {
+        "text": "Advanced Tools and Settings",
+        "items":[
+          {
+            "text": "Application Setings",
+            "link": "itom-config/advanced-tools-and-settings/application-settings"
+          }
+        ]
+      },
+      {
+        "text": "Configuration",
+        "items": [
+          {
+            "text": "Site Integration Services",
+            "link": "itom-config/configuration/site-integration-services"
+          }
+        ]
+      } 
     ]
   },
   "tags": []
