@@ -4,7 +4,7 @@
   "description": "ITOM configuration documentation",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "hdocs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "audience": [
     "public"
   ],
@@ -15,13 +15,7 @@
     "items": [
       {
         "text": "Introduction",
-        "expand": true,
-        "items": [
-          {
-            "text": "Welcome",
-            "link": "itom-config/index"
-          }
-        ]
+        "link": "itom-config/index"
       },  
       {
         "text": "ITOM Setup",
