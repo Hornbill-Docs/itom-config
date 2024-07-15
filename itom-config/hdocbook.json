@@ -1,10 +1,10 @@
 {
   "docId": "itom-config",
-  "title": "ITOM Configuration",
-  "description": "ITOM configuration documentation",
+  "title": "ITOM Configuration Guide",
+  "description": "ITOM Configuration Guide",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "hdocs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "audience": [
     "public"
   ],
