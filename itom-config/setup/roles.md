@@ -15,3 +15,21 @@ ITOM roles are collections of rights that provide access to different features a
 |-|-|
 |ITOM Application Administrator|Assign to those users that will need access to the ITOM settings within the Configuration section (i.e. to set SIS Servers or Application Settings).|
 |ITOM Application User|Assign to those users that will be using the ITOM application. You need this role to make the ITOM icon visible on the left sidebar.|	
+
+## Rights
+|Right|Description|
+|-|-|
+|Manage Automation Jobs|Enables access to the job queue where IT Automation and Discovery Jobs can be initiated and monitored|
+|Manage Inventory|Enables access to the inventory where devices can be organized and there managed status set|
+|Manage Runbooks|Enables access to the Runbook orchestration features|
+|Manage Site Integration Services|Enables the creation and management Site Integration Connectors|
+|Manage Site Integration Packages|Enables the ability to create and manage custom packages|
+
+## System Roles
+These addisional system roles are required for users that need to create workflows or keysafe entires.
+|Role|Description|
+|-|-|
+|Business Process Manager|Required for access to the orchestration features provided by Runbooks (powered by the BPM)|
+|manageKeysafe|Required for access to the Keysafe features in order to apply credentilas to IT Automations|
+
+<!-- https://wiki.hornbill.com/index.php?title=ITOM_Roles_and_Rights-->
