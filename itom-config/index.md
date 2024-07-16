@@ -9,3 +9,23 @@ Packages are the core components used to provide IT Automations and are the buil
 Individual Automations can be created directly within the Job queue or scheduled along with Runbooks using the Job Scheduler and easily accessed via other Hornbill applications with access to the Business Process Engine or AutoTasks. Developers can use Hornbill's XMLMC API to trigger an Automation or Runbook process, allowing external applications and systems to be integrated.
 
 To gain access to ITOM, assuming you have a subscription or are using the free tier, users will need to be assigned rights to the various features provided.
+
+## ITOM Subscription
+Free preview access is available by default for all Hornbill subscriptions when you have no ITOM subscription. The free tier is provided to enable you to give ITOM a try and let you navigate around the full capabilities of ITOM. The free tier is limited to 10 job runs a month to facilitate this trial; if your usage in production is so light that ten jobs are enough, you are free to use ITOM capabilities in production without a subscription.
+
+ITOM is available in different subscription tiers. All instances have access to the basic free tier, and it can be upgraded when requested. Below is a table detailing the tiers and the functionality available on each tier:
+
+||Free Preview|Basic User Account Mgmt|Server|DevOps|
+|-|-|-|-|-|
+|Job Runs Per Month|10|100|Unlimited|Unlimited|
+|Site Integration Servers	1	2	8	8
+|Discovery (marked as Managed) (* see info below)	10	10	100	100
+|Job Queue	Yes	Yes	Yes	Yes
+|Pre-Packaged Content: Basic Windows AD/Network Account Management	Yes	Yes	Yes	Yes
+|Windows Administration	Yes	Yes	Yes	Yes
+|Linux/*nix/Network Management (SSH etc.)	Yes	No	Yes	Yes
+|Pre-Packaged Content: Server and Cloud Management *	Yes	No	Yes	Yes
+|Runbook Automation	Yes (1)	No	Yes	Yes
+|Job Scheduling	Yes (1)	No	Yes	Yes
+|Custom Package Creation, Powershell and Bash scripting	Yes (1)	No	No	Yes
+|Full Software Deployment	Yes (1)	No	No	Yes
