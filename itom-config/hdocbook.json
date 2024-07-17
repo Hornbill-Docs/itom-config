@@ -4,7 +4,7 @@
   "description": "ITOM Configuration Guide",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "com.hornbill.itom",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "audience": [
     "public"
   ],

@@ -18,14 +18,14 @@ ITOM is available in different subscription tiers. All instances have access to 
 ||Free Preview|Basic User Account Mgmt|Server|DevOps|
 |-|-|-|-|-|
 |Job Runs Per Month|10|100|Unlimited|Unlimited|
-|Site Integration Servers	1	2	8	8
-|Discovery (marked as Managed) (* see info below)	10	10	100	100
-|Job Queue	Yes	Yes	Yes	Yes
-|Pre-Packaged Content: Basic Windows AD/Network Account Management	Yes	Yes	Yes	Yes
-|Windows Administration	Yes	Yes	Yes	Yes
-|Linux/*nix/Network Management (SSH etc.)	Yes	No	Yes	Yes
-|Pre-Packaged Content: Server and Cloud Management *	Yes	No	Yes	Yes
-|Runbook Automation	Yes (1)	No	Yes	Yes
-|Job Scheduling	Yes (1)	No	Yes	Yes
-|Custom Package Creation, Powershell and Bash scripting	Yes (1)	No	No	Yes
-|Full Software Deployment	Yes (1)	No	No	Yes
+|Site Integration Servers|1|2|8|8|
+|Discovery (marked as Managed)|10|10|100|100|
+|Job Queue|Yes|Yes|Yes|Yes|
+|Pre-Packaged Content: Basic Windows AD/Network Account Management|Yes|Yes|Yes|Yes|
+|Windows Administration|Yes|Yes|Yes|Yes|
+|Linux/*nix/Network Management (SSH etc.)|Yes|No|Yes|Yes|
+|Pre-Packaged Content: Server and Cloud Management|Yes|No|Yes|Yes|
+|Runbook Automation|Yes|No|Yes|Yes|
+|Job Scheduling|Yes|No|Yes|Yes|
+|Custom Package Creation, Powershell and Bash scripting|Yes|No|No|Yes|
+|Full Software Deployment|Yes|No|No|Yes|
