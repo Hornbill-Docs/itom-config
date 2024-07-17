@@ -1,9 +1,17 @@
 # Site Integration Service
-Hornbill's Site Integration Service (SIS) is a Windows NT Server service installed on a server behind an organization's firewall. It runs as a standard Windows NT Service and, once paired with a Hornbill instance, monitors the ITOM Job Queue. The SIS connects to the instance order to retrieve jobs that have been placed on the job queue for execution.
+Hornbill's Site Integration Service (SIS) is a software package installed on a computer which sits behind an organization's firewall. It runs as a standard Windows service and, once paired with a Hornbill instance, the instance will make the site integration server instance available for servicing the ITOM Job Queue. 
 
-Should jobs be detected during a polling interval, the SIS pulls all information from the paired instance regarding the jobs required to be undertaken on specified devices on the network. There are currently two types of jobs available; Computer Discovery and IT Automation. Automation jobs are powered via pre-built packages provided by Hornbill or can be custom-built using the ITOM Package Creator.
+When pairing a Site Integration Server with a Hornbill instance, you are creating a truest relationship between the site integration service and your Hornbill instance. Once a trust relationship is established, there is an implicit bond made between you Hornbill instance and that SIS instance, ensuring that access to the SIS capabilities to execute integrations and automation jobs can only by orchestrated by your instance. 
 
-A web interface is provided, which allows for the initial pairing and display of the service's current status. The service is self-updating and will detect if a new version has been made available within the cloud and, if so, download and install it automatically. All communications with the cloud will always be initiated locally from the SIS to the cloud and never from the cloud.
+## How it works
+Communications between your instance and the SIS service uses standard secure HTTPS protocol. For security reasons, all connections are established/set up from behind the firewall (the SIS server) to the Hornbill instance (in the cloud).  This means its not possible for any instance other than the authorized Hornbill instance to make use of th SIS service. 
+
+Jobs that are run by the SIS service are queued on your Hornbill instance, the SIS service will retrieve each job to be run and process it as required. There are currently two main job types; Computer Discovery and IT Automation.  Automation jobs are enabled through pre-built packages provided by Hornbill, and, for those customers using the DevOps edition, the packages can be custom-built using the ITOM Package Creator tools.
+
+The SIS server provides a simple web interface, which is accessible from within your network. This simple UI allows for the initial pairing configuration, and once paired, will display of the service's current status.  
+
+## Software Updates
+The SIS service is self-updating, it will automatically detect if a new service or package versions are available, and, where required will update the SIS service software, components and packages completely automatically.
 
 ## Technical Considerations
 ### System Requirements
@@ -14,42 +22,42 @@ A web interface is provided, which allows for the initial pairing and display of
 * Can be run on virtual as well as physical machines.
 
 ### Connectivity
-* The SIS communicates with a Hornbill instance using the secure HTTPS protocol.
-* Hornbill instances will only respond to a successfully paired SIS.
+* The SIS communicates with a Hornbill instance using the secure HTTPS protocol. All connections are initiated from the SIS service to the cloud service, so there is no need to make any special firewall configurations or open special ports (unless your internal network security policies block normal HTTPS web traffic) in order for the SIS server to function. 
+* The pairing between an Hornbill instance and a SIS service is a secure one-to-one binding scheme that makes it impossible for any job execution to happen that is not controlled by the bonded Hornbill instance. 
 
 :::note
-Support for communications via a proxy service is not currently available.
+Because of the tight security requirements of the connection between a SIS service and a Hornbill cloud instance, there is no support for communications via a proxy services.
 :::
 
 ### Discovery and Package Deployment
-The SIS is capable of discovering the following devices:
+The SIS service is capable of discovering the following devices on your network:
 
-* Windows 32/64bit computers that are currently supported by Microsoft
-* Unix/Linux/Mac Computers running ssh
+* All Windows computers that are currently supported by Microsoft.
+* Unix/Linux/Mac computers that are SSH enabled. 
 
-Depending on the content of the deployment package, there may be additional OS requirements.
+Individual packages you deploy may have additional OS requirements.
 
 ### Firewall Configuration
-A Windows firewall rule for Inbound traffic (Local subnet) that allows all TCP traffic into the SIS service executable is created on installation and named:
+A Windows firewall rule for Inbound traffic (Local network traffic only) that allows any TCP traffic into the SIS service  is created on installation and named:
 * Hornbill SIS Server - Context Callback (TCP - In).
 
 The following outbound ports between the SIS server and the cloud instance are required:
 * HTTPS TCP 443
 
-The following ports between the SIS server and Managed Devices are required, dependant on which method is adopted to retrieve Inventory details:
+The following ports between the SIS server and Managed Devices are generally used, the exact port(s) used depend on which method is used for communicating with the target computers:
 * WinRM - TCP 5985
 * DCOM - TCP 135
 * DCOM - Range of dynamic ports:
     * TCP 49152-65535 (RPC dynamic ports – Windows Vista, 2008 and above)
     * TCP 1024-65535 (RPC dynamic ports – Windows NT4, Windows 2000, Windows 2003)
+
 Site Integration Service Discovery (Dependant on the discovery mode used)
 * Active Directory / LDAP
     * TCP Port 389 (Between the SIS and the AD Domain Controller / LDAP Server)
 * Secure Shell (ssh)
     * TCP Port 22 (Between the SIS and target devices)
 
-The following is required to support the TCP Ping test used during discovery (only required if the feature is in use):
-* ICMP Echo Reply
+The discovery process will make use of ICMP (TCP Ping) during the discovery process.
 
 ## Toolbar
 * **Refresh**<br>A refresh of the list may be required to display any new devices discovered while you are viewing the list.
@@ -78,17 +86,17 @@ List
     * Name - name used to identify the SIS server to the Hornbill Instance.
     * Group - Should be a least one default group, others can be selected via drop down if created previously.
 1. Click the Create Site Integration Service button.
-1. The Authorisation Code is displayed, and should be recorded for later use.
+1. The Authorization Code is displayed, and should be recorded for later use.
 1. See the next section for details of how to pair your SIS with your Hornbill instance.
 1. Should you choose not to complete the pairing at this time, the connector can be found by selecting the Not Paired filter in your list of SIS Connectors.
 
 :::tip
-The Authorisation Code is valid for 1 hour. Should the SIS connector and SIS installation not be paired during this time, the key will expire. To generate a new Key, remove the SIS connector and recreate it.
+The Authorization Code is valid for 1 hour. Should the SIS connector and SIS installation not be paired during this time, the key will expire. To generate a new Key, remove the SIS connector and recreate it.
 :::
 
 ## Downloading and Installing the SIS Service
-The Site Integration Service is installed as a Windows NT Service called "ESPSisService"
-The Hornbill SIS is installed as a Windows NT Service and will require local administration rights for installation on the target computer.
+The Site Integration Service is installed as a Windows Service called "ESPSisService"
+The Hornbill SIS is installed as a Windows Service and will require local administration rights for installation on the target computer.
 
 1. Navigate to: Administration > Hornbill ITOM > Site Integration Services
 1. Click the Download Site Integration Server button on the toolbar
@@ -100,8 +108,8 @@ The Hornbill SIS is installed as a Windows NT Service and will require local adm
 1. Start the EspSisService if it isn't already running
 
 ## Pairing an SIS Server with a Hornbill Instance
-Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which will require an Authorization Code. This code will have been provided while creating an SIS connector. See the section Creating an SIS Connector on the Hornbill Instance.
-1. Open the Browser and navigate to http://localhost:11117. After a short pause, a prompt for the Instance Id and an Authorization Code appears.
+Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which will require an Authorization Code. This code will have been provided while creating an SIS connector. See the section <a href="#creating-an-sis-service-profile-on-the-hornbill-instance">Creating an SIS Connector on the Hornbill Instance</a>
+1. Open a Browser window on the computer where the SIS server is installed, and go to the URL http://localhost:11117, here you will be presented with a form to enter the Instance ID and an Authorization Code needed to pair with your instance. 
 1. Enter the Instance ID and Authorization Code.
 1. Click the Pair with Instance button.
 
