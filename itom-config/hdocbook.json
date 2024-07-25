@@ -4,7 +4,7 @@
   "description": "ITOM Configuration Guide",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "com.hornbill.itom",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "audience": [
     "public"
   ],
@@ -18,7 +18,7 @@
         "link": "itom-config/index"
       },
       {
-        "text": "ITOM Setup",
+        "text": "Setting up ITOM",
         "items": [
           {
             "text": "Users",
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "text": "Customize",
+        "text": "Customizing ITOM",
         "items": [
           {
             "text": "Translations",
@@ -40,16 +40,16 @@
         ]
       },
       {
-        "text": "Advanced Tools and Settings",
+        "text": "Advanced tools and settings",
         "items": [
           {
-            "text": "Application Setings",
+            "text": "Application Settings",
             "link": "itom-config/advanced-tools-and-settings/application-settings"
           }
         ]
       },
       {
-        "text": "Configuration",
+        "text": "Configuring ITOM",
         "items": [
           {
             "text": "Site Integration Services",
