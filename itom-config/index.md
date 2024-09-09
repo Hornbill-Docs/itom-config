@@ -6,7 +6,7 @@ Hornbill's IT Operations Management (ITOM) application gives you control over al
 
 Packages provide IT automations and are the building blocks used within an orchestration built using runbooks. They are published within the ITOM Package Library, produced and maintained by Hornbill, and new packages are being added regularly. You can also create custom packages as required, with expertise available in-house using  ITOM's Package Creator.
 
-You can create individual automations directly within the job queue or schedule them along with runbooks using the Job Scheduler. Your automations are easily accessed via other Hornbill applications with access to the Business Process Engine or AutoTasks.
+You can create individual automations directly within the job queue or schedule them along with runbooks using the Job Scheduler. Your automations are easily accessed via other Hornbill applications with access to the Business Process Workflow Engine or AutoTasks.
 
 For integration of external applications and systems, developers can use Hornbill's XMLMC API to trigger an automation or runbook process.
 

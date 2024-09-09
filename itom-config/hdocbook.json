@@ -18,12 +18,8 @@
         "link": "itom-config/index"
       },
       {
-        "text": "Setting up ITOM",
+        "text": "Roles and Rights",
         "items": [
-          {
-            "text": "Users",
-            "link": "itom-config/setup/users"
-          },
           {
             "text": "Roles",
             "link": "itom-config/setup/roles"
