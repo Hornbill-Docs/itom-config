@@ -7,44 +7,56 @@ The [ITOM Application User role](/itom-config/setup/roles#itom-application-admin
 
 
 ## Topics covered
-* The roles that are included with ITOM at installation.
-* How to create custom roles
+* The roles that are included with ITOM at installation
+* How to [create custom roles](/itom-config/setup/roles#adding-custom-roles)
 
 ## Before you begin
-* Understand how [roles are managed](/esp-config/organizational-data/roles).
+Understand how [roles are managed](/esp-config/organizational-data/roles).
 ::: note
  When you assign a role with a privilege level of `user` or higher, a Service Manager subscription license is automatically allocated to that user.
 :::
 
 ## ITOM Application Administrator
 
-This role provides access to the ITOM settings within Configuration (i.e. to set SIS Servers or Application Settings).
+This role provides access to the ITOM settings within Configuration (i.e. to set up Site Integration Services servers or manage application settings).
 
-|Application rights|System rights|
-|-|-|
-|`canAdministerITOM` |**Configuration:**<br />Manage Application Settings<br /> Manage Site Integration Services |
+The ITOM Application Administrator has the `canAdministerITOM` application right, and system rights as follows:
+
+### Configuration
+- **Manage Application Settings.**
+- **Manage Site Integration Services.**
 
 ## ITOM Application User
-Assign to those users that will be using the ITOM application. You need this role to make the ITOM icon visible on the left sidebar.
+Assign this role to those users who will use the ITOM application. Users need this role to see the ITOM icon visible on the left sidebar and access the application.
 
-|Application rights|System rights|
-|-|-|
-|`canUseITOM` |**Data:** <br />Managed Scheduled Jobs <br /> Create Scheduled Jobs <br /> Update Scheduled Jobs <br /> Delete Scheduled Jobs <br /> <br /> **Configuration:** <br /> Manage Workflows, Autotasks, Lifecycle Processes <br /> Manage Progressive Capture <br /> manageKeysafe <br /> Manage Site Integration Services <br /> Manage Runbooks <br /> Manage Automation Jobs <br /> Manage Inventory |
+The ITOM Application User has the `canUseITOM` application right, and system rights as follows:
 
-## Rights
-|Right|Description|
-|-|-|
-|Manage Automation Jobs|Enables access to the job queue where IT Automation and Discovery Jobs can be initiated and monitored|
-|Manage Inventory|Enables access to the inventory where devices can be organized and there managed status set|
-|Manage Runbooks|Enables access to the Runbook orchestration features|
-|Manage Site Integration Services|Enables the creation and management Site Integration Connectors|
-|Manage Site Integration Packages|Enables the ability to create and manage custom packages|
+### Data
+- **Managed Scheduled Jobs.**
+- **Create Scheduled Jobs.**
+- **Update Scheduled Jobs.**
+- **Delete Scheduled Jobs.**
 
-## System roles
-These additional system roles are required for users that need to create workflows or KeySafe entries.
-|Role|Description|
-|-|-|
-|Business Process Manager|Required for access to the orchestration features provided by Runbooks (powered by the BPM)|
-|manageKeysafe|Required for access to the Keysafe features in order to apply credentilas to IT Automations|
+### Configuration
+- **Managed Workflows, Autotasks, Lifecycle Processes.**
+- **Manage Progressive Capture.**
+- **manageKeysafe.** Enables access to the KeySafe features for applying credentials to IT automations.
+- **Manage Site Integration Services.** Enables the creation and management of Site Integration connectors.
+- **Manage Runbooks.** Enables access to the Runbook orchestration features.
+- **Manage Automation Jobs.** Enables access to the job queue where IT Automation and Discovery Jobs can be initiated and monitored.
+- **Manage Inventory.** Enables access to the inventory where devices can be organized and their managed statuses can be set.
+
+## Adding custom roles
+Both the ITOM Application Administrator role and the ITOM Application User role can add user-created roles.
+
+**To add a custom role:**
+1. At the bottom of the left-hand menu bar, click the cog icon to open Configuration. (A shortcut is to use CTRL+SHIFT+S on your keyboard.)
+1. Select **Hornbill ITOM**.
+1. Under *Hornbill ITOM Setup*, select **Roles**.
+1. In the list of roles, click **Create New Role**.
+1. Give the role a name (Role ID) and description, configure its privilege level and type, then click **Create Role**.
+1. In the Application Rights tab, assign administration and user rights, then click **Save Changes**.
+1. In the System Rights tab, assign rights to the role, then click **Save**.
+1. In the Assigned Users tab, add one or more users to the role.
 
 <!-- https://wiki.hornbill.com/index.php?title=ITOM_Roles_and_Rights-->
