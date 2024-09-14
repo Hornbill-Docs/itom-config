@@ -10,7 +10,7 @@ You can configure the various application settings associated with Hornbill ITOM
 1. Under *Advanced Tools & Settings*, select **Application Settings**.
 
 ## Filters
-About the settings list, there is a quick filter and some other options available to help you find the setting you want.
+Above the settings list, there is a quick filter and some other options available to help you find the setting you want.
 
 ## Settings
 |Name|Description|
