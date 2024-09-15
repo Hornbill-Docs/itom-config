@@ -94,70 +94,78 @@ The discovery process will make use of ICMP (TCP Ping) during the discovery proc
 * **Last Seen On.** The last time there was communication between the Hornbill SIS and the SIS Server.
 
 ## Creating an SIS profile on the Hornbill instance
-1. Navigate to Administration > Hornbill ITOM > Site Integration Services.
-1. Click the NewPackageButton.png button to create a new SIS Connector.
+**To create an SIS profile:**
+1. At the bottom of the left-hand menu bar, click the cog icon to open Configuration. (A shortcut is to use CTRL+SHIFT+S on your keyboard.)
+1. Select **Hornbill ITOM**.
+1. Under *Configuration*, select **Site Integration Services**.
+1. Click the Add button (plus sign) to create a new SIS connector.
 1. Enter the following details:
-    * Name - name used to identify the SIS server to the Hornbill Instance.
-    * Group - Should be a least one default group, others can be selected via drop down if created previously.
-1. Click the Create Site Integration Service button.
-1. The Authorization Code is displayed, and should be recorded for later use.
-1. See the next section for details of how to pair your SIS with your Hornbill instance.
-1. Should you choose not to complete the pairing at this time, the connector can be found by selecting the Not Paired filter in your list of SIS Connectors.
-
-:::tip
-The Authorization Code is valid for 1 hour. Should the SIS connector and SIS installation not be paired during this time, the key will expire. To generate a new Key, remove the SIS connector and recreate it.
-:::
+    * Name. This is used to identify the SIS server to the Hornbill Instance.
+    * Group. There should be a least one default group. Others can be selected via drop down if created previously.
+1. Click **Add Site Integration Service Connector**.
+1. Make a note of the authorization code displayed for later use.
+    :::note
+    The authorization code is valid for 1 hour. Should the SIS connector and SIS installation not be paired during this time, the key will expire. To generate a new key, remove the SIS connector and recreate it.
+    :::
+1. Follow the instructions to [download and install the SIS](/configuration/site-integration-services/downloading-and-installing-the-sis).
+1. Follow the instructions to [pair your SIS with your Hornbill instance](/configuration/site-integration-services/pairing-an-sis-server-with-a-hornbill-instance). If you choose not to complete the pairing at this time, you can find the connector by filtering on Not Paired in your list of SIS connectors.
 
 ## Downloading and installing the SIS
-The Site Integration Service is installed as a Windows Service called "ESPSisService"
-The Hornbill SIS is installed as a Windows Service and will require local administration rights for installation on the target computer.
+The Site Integration Service is installed as a Windows service called "ESPSisService".
 
-1. Navigate to: Administration > Hornbill ITOM > Site Integration Services
-1. Click the Download Site Integration Server button on the toolbar
-1. Locate the downloaded executable (.exe), and double click to begin
-1. Click Install
-1. Click Ok to Confirm the Installation
-1. Close the Install dialog
-1. Open the Services mmc console
-1. Start the EspSisService if it isn't already running
+The Hornbill SIS is installed as a Windows service and will require local administration rights for installation on the target computer.
+
+**To download and install the SIS:**
+1. In *Configuration*, select **Site Integration Services**.
+1. Click **Download Site Integration Server**.
+1. Locate the downloaded executable (.exe), and double-click to begin.
+1. Click **Install**.
+1. Click **OK** to confirm the installation.
+1. Close the Install dialog.
+1. Open the Services mmc console.
+1. Start the EspSisService if it isn't already running.
 
 ## Pairing an SIS server with a Hornbill instance
-Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which will require an Authorization Code. This code will have been provided while creating an SIS connector. See the section <a href="#creating-an-sis-service-profile-on-the-hornbill-instance">Creating an SIS Connector on the Hornbill Instance</a>
-1. Open a Browser window on the computer where the SIS server is installed, and go to the URL http://localhost:11117, here you will be presented with a form to enter the Instance ID and an Authorization Code needed to pair with your instance. 
-1. Enter the Instance ID and Authorization Code.
-1. Click the Pair with Instance button.
+Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which requires the authorization code created in [Creating an SIS profile on the Hornbill instance](/configuration/site-integration-services/creating-an-sis-service-profile-on-the-hornbill-instance).
 
-The Instance ID and valid Authorization Code are required to pair an SIS with your Hornbill instance. Once paired, the SIS status is reviewable via http://localhost:11117.
+**To pair an SIS server:**
+1. Open a browser window on the computer where the SIS server is installed, and go to the URL http://localhost:11117. Here you will be presented with a form to enter the Instance ID and an authorization code needed to pair with your instance. 
+1. Enter the Instance ID and authorization code.
+1. Click **Pair with Instance**.
+
+Once the SIS is paired with our Hornbill instance, you can review the SIS status is on http://localhost:11117.
 
 ## Grouping SIS servers
-The creation of groups enables SIS connectors and SIS installations to be logically grouped; each SIS entry must belong to a single group. A "Default" group is provided with the option to create additional groups as required. Generally, the network infrastructure, load balancing and failover requirements will determine the number and grouping of SIS installations.
+The creation of groups enables SIS connectors and SIS installations to be logically grouped; each SIS entry must belong to a single group. A default group is provided; you can create additional groups as required. Generally, the network infrastructure as well as the load-balancing and failover requirements will determine the number and grouping of SIS installations.
 
-* **Load Balancing**<br>When more than one server is placed within a group, Jobs sent to the group for processing will be processed by the next available SIS server spreading the load.
-* **Failover protection**<br>SIS servers poll the Job queue for available jobs, and thus if a server fails, any other server within the same group will pick the next available job. Any job currently being processed by the SIS server will fail, and the status set accordingly. If the job has already been pushed to a client and executed, then it will potentially be orphaned, and the status set to Timed-Out.
+* **Load balancing.** When more than one server is placed within a group, jobs sent to the group for processing will be processed by the next available SIS server spreading the load.
+* **Failover protection.** SIS servers poll the Job Queue for available jobs, and thus if a server fails, any other server within the same group will pick the next available job. Any job currently being processed by the SIS server will fail, and the status set accordingly. If the job has already been pushed to a client and executed, then it will potentially be orphaned, and the status set to Timed-Out.
 
-::: tip
-If a standalone SIS server fails then all jobs aimed at that server will be left in the Job queue and will not be processed until the server is up and running again.
-:::
+    ::: tip
+    If a standalone SIS server fails, then all jobs aimed at that server will be left in the Job Queue and will not be processed until the server is up and running again.
+    :::
 
 ## Creating a group
-1. From the ITOM page select Site Integration Services
-1. Click the Show dropdown
-1. Click +Create Group option
-1. Enter the New Group Name
-1. Click Apply
+**To create a group:**
+1. In *Configuration*, select **Site Integration Services**.
+1. Click the **Show** dropdown, then click **+Create Group**.
+1. Enter a name for the new group.
+1. Click **Apply**.
 
 ## Removing an SIS server installation
-If you want to remove the SIS server from your instance. simply navigate to the SIS servers tab in the admin tool and delete the SIS server you want to remove.
+If you want to remove the SIS server from your instance, navigate to the SIS servers tab in the admin tool and delete the SIS server you want to remove.
 
 The removal of the SIS server software from your server(s) requires manual steps in order to remove the service and all related files.
 
-1. Open Windows Powershell console as an administrator
+**To remove an SIS server installation:**
+1. Open Windows Powershell console as an administrator.
 1. Enter the following:
-    * Stop-Service EspSisService
-    * sc.exe delete EspSisService
-    * Remove-Item "$env:ProgramFiles\Hornbill\Site Integration Server" -Recurse
-    * Remove-Item "$env:ProgramData\Hornbill\Site Integration Server" -Recurse
-:::tip
-Care should be taken with these steps as they will perform a recursive delete on the two folders specified. Once the service is removed don't forget to remove the SIS entry on the instance.
-:::
+    * `Stop-Service EspSisService`
+    * `sc.exe delete EspSisService`
+    * `Remove-Item "$env:ProgramFiles\Hornbill\Site Integration Server" -Recurse`
+    * `Remove-Item "$env:ProgramData\Hornbill\Site Integration Server" -Recurse`
+    :::note
+    These steps will perform a recursive delete on the two folders specified.
+    :::
+1. Once the service is removed, delete the SIS entry on the instance.
 <!-- https://wiki.hornbill.com/index.php?title=Site_Integration_Services -->
