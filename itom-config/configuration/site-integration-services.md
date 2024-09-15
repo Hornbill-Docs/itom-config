@@ -4,17 +4,17 @@ Hornbill's Site Integration Service (SIS) is a software package installed on a c
 When pairing a Site Integration Server with a Hornbill instance, you are creating a trust relationship between the SIS and your Hornbill instance. Once a trust relationship is established, there is an implicit bond made between your Hornbill instance and that SIS instance, ensuring that access to the SIS capabilities to execute integrations and automation jobs can only by orchestrated by your instance. 
 
 ## Topics covered
-- [How it works](/configuration/site-integration-services/how-it-works)
-- [Software updates](/configuration/site-integration-services/software-updates)
-- [Technical considerations](/configuration/site-integration-services/technical-considerations)
+- [How it works](/configuration/site-integration-services#how-it-works)
+- [Software updates](/configuration/site-integration-services#software-updates)
+- [Technical considerations](/configuration/site-integration-services#technical-considerations)
 - [Toolbar](/configuration/site-integration-services/toolbar)
-- [Service details](/configuration/site-integration-services/service-details)
-- [Creating an SIS profile on the Hornbill instance](/configuration/site-integration-services/creating-an-SIS-profile-on-the-Hornbill-instance)
-- [Downloading and installing the SIS](/configuration/site-integration-services/downloading-and-installing-the-SIS)
-- [Pairing an SIS server with a Hornbill instance](/configuration/site-integration-services/pairing-an-SIS-server-with-a-hornbill-instance)
-- [Grouping SIS servers](/configuration/site-integration-services/grouping-sis-servers)
-- [Creating a group](/configuration/site-integration-services/creating-a-group)
-- [Removing an SIS server installation](/configuration/site-integration-services/removing-an-sis-server-installation)
+- [Service details](/configuration/site-integration-services#service-details)
+- [Creating an SIS profile on the Hornbill instance](/configuration/site-integration-services#creating-an-SIS-profile-on-the-Hornbill-instance)
+- [Downloading and installing the SIS](/configuration/site-integration-services#downloading-and-installing-the-SIS)
+- [Pairing an SIS server with a Hornbill instance](/configuration/site-integration-services#pairing-an-SIS-server-with-a-hornbill-instance)
+- [Grouping SIS servers](/configuration/site-integration-services#grouping-sis-servers)
+- [Creating a group](/configuration/site-integration-services#creating-a-group)
+- [Removing an SIS server installation](/configuration/site-integration-services#removing-an-sis-server-installation)
 
 ## How it works
 Communications between your instance and the SIS uses standard secure HTTPS protocol. For security reasons, all connections are established from behind the firewall (the SIS server) to the Hornbill instance (in the cloud). This means it is not possible for any instance other than the authorized Hornbill instance to make use of the SIS. 
