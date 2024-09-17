@@ -7,7 +7,7 @@ When pairing a Site Integration Server with a Hornbill instance, you are creatin
 - [How it works](/configuration/site-integration-services#how-it-works)
 - [Software updates](/configuration/site-integration-services#software-updates)
 - [Technical considerations](/configuration/site-integration-services#technical-considerations)
-- [Toolbar](/configuration/site-integration-services/toolbar)
+- [Toolbar](/configuration/site-integration-services#toolbar)
 - [Service details](/configuration/site-integration-services#service-details)
 - [Creating an SIS profile on the Hornbill instance](/configuration/site-integration-services#creating-an-SIS-profile-on-the-Hornbill-instance)
 - [Downloading and installing the SIS](/configuration/site-integration-services#downloading-and-installing-the-SIS)
