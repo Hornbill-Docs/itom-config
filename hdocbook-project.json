@@ -5,6 +5,8 @@
     "exclude_paths": []
   },
   "validation": {
-    "exclude_links": []
+    "exclude_links": [
+      "http://localhost:11117"
+    ]
   }
 }
