@@ -1,10 +1,11 @@
 {
   "docId": "itom-config",
   "title": "ITOM Configuration Guide",
-  "description": "ITOM Configuration Guide",
+  "description": "How to configure Site Integration Services",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "com.hornbill.itom",
-  "version": "1.0.0",
+  "version": "0.0.19",
+
   "audience": [
     "public"
   ],
@@ -18,20 +19,16 @@
         "link": "itom-config/index"
       },
       {
-        "text": "ITOM Setup",
+        "text": "Roles and rights",
         "items": [
           {
-            "text": "Users",
-            "link": "itom-config/setup/users"
-          },
-          {
-            "text": "Roles",
+            "text": "System roles",
             "link": "itom-config/setup/roles"
           }
         ]
       },
       {
-        "text": "Customize",
+        "text": "Customizing ITOM",
         "items": [
           {
             "text": "Translations",
@@ -40,19 +37,19 @@
         ]
       },
       {
-        "text": "Advanced Tools and Settings",
+        "text": "Advanced tools and settings",
         "items": [
           {
-            "text": "Application Setings",
+            "text": "Application settings",
             "link": "itom-config/advanced-tools-and-settings/application-settings"
           }
         ]
       },
       {
-        "text": "Configuration",
+        "text": "Configuring ITOM",
         "items": [
           {
-            "text": "Site Integration Services",
+            "text": "Site Integration Service",
             "link": "itom-config/configuration/site-integration-services"
           }
         ]

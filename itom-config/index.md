@@ -1,31 +1,37 @@
 ---
 layout: article-toc
 ---
-# IT Operations Managment (ITOM) 
-Hornbill's IT Operations Management (ITOM) includes administrative processes and support for software and hardware that allow you to execute routine tasks to support and control your IT services and IT infrastructure. Based around several key components hosted within the Hornbill cloud and an on-premise service running behind the corporate firewall. These components allow the ability to discover devices across the network infrastructure, use various techniques, and initiate IT automation and Orchestrations.
+# IT Operations Management (ITOM) 
+ITOM is Hornbill's solution for on-premises IT automation. With ITOM, you can manage your organization’s IT services and infrastructure by automating the routine tasks and processes that consume the bulk of your IT staff’s time and energy.
 
-Packages are the core components used to provide IT Automations and are the building blocks used within an Orchestration built using Runbooks. They are published within the ITOM Package Library, produced and maintained by Hornbill, with packages being regularly developed. It is also possible the creation of custom packages where required, and the expertise is available in-house using the ITOM Package creator.
+Hornbill’s IT automation is based on key components hosted within the Hornbill cloud, and a service running behind your corporate firewall. These components enable you to discover devices across your network infrastructure, manage device inventory, and initiate IT automations and orchestrations.
 
-Individual Automations can be created directly within the Job queue or scheduled along with Runbooks using the Job Scheduler and easily accessed via other Hornbill applications with access to the Business Process Engine or AutoTasks. Developers can use Hornbill's XMLMC API to trigger an Automation or Runbook process, allowing external applications and systems to be integrated.
+**Site Integration Service.** The SIS behind your firewall discovers desktops, laptops, servers, and other IT assets.
 
-To gain access to ITOM, assuming you have a subscription or are using the free tier, users will need to be assigned rights to the various features provided.
+**Packages and runbooks.** Packages provide IT automations and are the building blocks of orchestrations built with runbooks. Packages, published within the ITOM Package Library, are produced and maintained by Hornbill. New packages are being added regularly. You can also create custom packages as required using ITOM’s Package Creator.
 
-## ITOM Subscription
-Free preview access is available by default for all Hornbill subscriptions when you have no ITOM subscription. The free tier is provided to enable you to give ITOM a try and let you navigate around the full capabilities of ITOM. The free tier is limited to 10 job runs a month to facilitate this trial; if your usage in production is so light that ten jobs are enough, you are free to use ITOM capabilities in production without a subscription.
+**Job queue and the Job Scheduler.** You can execute individual automations directly within the job queue or schedule them along with runbooks using the Job Scheduler. Your automations are easily accessed via other Hornbill applications with access to the Business Process Workflow Engine or AutoTasks.
 
-ITOM is available in different subscription tiers. All instances have access to the basic free tier, and it can be upgraded when requested. Below is a table detailing the tiers and the functionality available on each tier:
+**Integrations.** For integration of external applications and systems, developers can use Hornbill’s XMLMC API to trigger an automation or runbook process.
 
-||Free Preview|Basic User Account Mgmt|Server|DevOps|
+**Access.** To grant users access to ITOM, you assign rights to the various features provided.
+
+## ITOM subscription tiers
+ITOM is available in subscription tiers. Free preview access is available by default for all Hornbill subscriptions. The Free Preview tier enables you to try out ITOM and navigate its full capabilities. The free tier is limited to 10 job runs per month; if your usage in production is so light that 10 jobs are enough, you may use ITOM in production without a subscription. You may upgrade to a higher tier by request.
+
+The functionality available on each tier is as follows:
+
+||Free Preview|Basic User Account Management|Server|DevOps|
 |-|-|-|-|-|
-|Job Runs Per Month|10|100|Unlimited|Unlimited|
+|Job runs per month|10|100|Unlimited|Unlimited|
 |Site Integration Servers|1|2|8|8|
-|Discovery (marked as Managed)|10|10|100|100|
-|Job Queue|Yes|Yes|Yes|Yes|
-|Pre-Packaged Content: Basic Windows AD/Network Account Management|Yes|Yes|Yes|Yes|
-|Windows Administration|Yes|Yes|Yes|Yes|
-|Linux/*nix/Network Management (SSH etc.)|Yes|No|Yes|Yes|
-|Pre-Packaged Content: Server and Cloud Management|Yes|No|Yes|Yes|
-|Runbook Automation|Yes|No|Yes|Yes|
-|Job Scheduling|Yes|No|Yes|Yes|
-|Custom Package Creation, Powershell and Bash scripting|Yes|No|No|Yes|
-|Full Software Deployment|Yes|No|No|Yes|
+|Discovery (marked as managed)|10|10|100|100|
+|Job queue|Yes|Yes|Yes|Yes|
+|Pre-packaged content: Basic Windows AD/network account management|Yes|Yes|Yes|Yes|
+|Windows administration|Yes|Yes|Yes|Yes|
+|Linux/*nix/network management (SSH etc.)|Yes|No|Yes|Yes|
+|Pre-packaged content: server and cloud management|Yes|No|Yes|Yes|
+|Runbook automation|Yes|No|Yes|Yes|
+|Job scheduling|Yes|No|Yes|Yes|
+|Custom package creation, PowerShell and Bash scripting|Yes|No|No|Yes|
+|Full software deployment|Yes|No|No|Yes|
