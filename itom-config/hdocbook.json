@@ -4,7 +4,7 @@
   "description": "ITOM Configuration Guide",
   "publicSource": "https://github.com/Hornbill-Docs/itom-config",
   "productFamily": "com.hornbill.itom",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "audience": [
     "public"
   ],
@@ -56,6 +56,10 @@
             "link": "itom-config/configuration/site-integration-services"
           }
         ]
+      },
+      {
+        "text": "Quick Start Guide",
+        "link": "itom-config/quick-start-guide"
       }
     ]
   },
