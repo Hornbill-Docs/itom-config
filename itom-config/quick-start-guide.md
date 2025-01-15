@@ -142,17 +142,19 @@ The Inventory View allows you to Browse and Manage all discovered devices; from 
 ### Registering Multiple Devices as Managed
 Setting devices as Managed individually is not always desirable, a more efficient method is to set multiple devices at the same time.
 
-Click check next to the heading Name to select All Discovered Devices
-InventorySelectAll.png
+1. Click the checkbox next to the heading Name to select All Discovered Devices
 
-Individual devices can be selected / deselected by clicking the check box adjacent to each entry.
+    ![Select All Inventory](/_books/itom-config/images/select-all-inventory.png)
 
-Click the The Set As Managed SetAsManagedButton.png button on the toolbar
-Click Yes to confirm
-Select All Managed Inventory
-Inventory Properties
-Click on the Name of a Managed inventory Item
-InventoryManagedProperties.png
+    Individual devices can be selected / deselected by clicking the check box adjacent to each entry.
+1. Click the The Set As Managed button on the toolbar.
+1. Click `Yes` to confirm.
+1. Select All Managed Inventory
+
+### Inventory Properties
+1. Click on the name of a managed inventory item to open the properties.
+
+![Managed Inventory Properties](/_books/itom-config/images/managed-inventory-properties.png)
 
 ## Installed Packages
 Before any IT Automations can be configured, the required packages will need to be available and listed in the Installed Packages list. There are few ways for Packages to be installed depending on your subscription, including manually uploading or creating your own package from scratch. The Package Library is a more convenient method and contains several packages produced and supported by Hornbill, from which you can install, update or remove.
@@ -163,12 +165,12 @@ Before any IT Automations can be configured, the required packages will need to 
 The packages that are available will depend on your subscription, all Windows Management packages will be available as standard. The following steps will take you through the installation of the Active Directory and Windows Management packages, available to all subscription levels:
 
 1. Navigate to (Home > ITOM > Installed Packages)
-1. Click the Package Library PackageLibraryButton.png button
+1. Click the Package Library Package button
 
-<!-- ![Package Libarary](/_books/itom-config/images/package-library-list.png) -->
-1. Click Install on both the Active Directory Group and User Management packages
-1. Click Install on Windows Disk Cleanup
-1. Click Close
+    ![Package Libarary](/_books/itom-config/images/package-library-list.png)
+1. Click `Install` on both the Active Directory Group and User Management packages
+1. Click `Install` on Windows Disk Cleanup
+1. Click `Close`
 
 ## IT Automation Job
 Once packages have been installed, IT Automation jobs can execute specific actions on individual or multiple devices. In the following examples, the steps will guide you through configuring an Automation on both a single device and across multiple devices.
@@ -195,33 +197,33 @@ The following steps will guide you through the process of configuring and execut
     * Name  : Andy Smith
 1. Click Create
 
-<!-- ![Monitor-AD User Creation](/_books/itom-config/images/monitor-ad-create-user.png) -->
+The monitor tab shows the raw output from the job. The last entry will display "The job was executed successfully". However, that only confirms that the process executed and not if the action successfully created the user. 
 
-The monitor tab shows the raw output from the job; you will see the last entry is "The job was executed successfully". However, that only confirms that the process executed and not if the action successfully created the user. The information showing the outcome of the create operation will be within the block of text output in white and will vary depending on the package. In this example, the text {{SISJobOutputParameterStart:outcome}}OK{{SISJobOutputParameterEnd}} shows that the outcome was successful and the action created the user. In many cases, it may difficult to locate the relevant output parameters to identify the outcome. In these cases, the Package Details section provides a list of both input and output parameters in a user-friendly manner:
+![Monitor-AD User Creation](/_books/itom-config/images/monitor-ad-create-user.png)
 
-<!-- ![Job Package Details](/_books/itom-config/images/job-package-details.png) -->
+The information showing the outcome of the create operation will be within the block of text output in white and will vary depending on the package. In this example, the text {{SISJobOutputParameterStart:outcome}}OK{{SISJobOutputParameterEnd}} shows that the outcome was successful and the action created the user. In many cases, it may difficult to locate the relevant output parameters to identify the outcome. In these cases, the Package Details section provides a list of both input and output parameters in a user-friendly manner:
+
+![Job Package Details](/_books/itom-config/images/job-package-details.png)
 
 ### Multiple Computers
 You can perform a package operation across several devices using a single Job when the target is specified using an Inventory List. The list must already exist and populated with one or more devices; they are created and managed via the ITOM Inventory. The following steps will guide you through the process of configuring an IT Automation that executes an action from the Windows Management package to restart the print service on multiple Windows devices.
 
-Navigate to (Home > ITOM > Job Queue)
-Click the Create New button, and select IT Automation
-Enter Name: Restart Print Spooler
-Click the Installed Packages button
-Select provate:hornbill > Managing Windows Devices > Windows Management (...)
-Click Apply
-Set Operation to: Service - Restart
-Set Site Target to Server and select an Instance
-Set Target Device to: Inventory and select a Device
-Set Admin Credentials to Network Admin
-Click Create
-JobQueueList.png
+1. Navigate to (Home > ITOM > Job Queue)
+    ![Job Queue](/_books/itom-config/images/job-queue.png)
+1. Click the `Create New` button, and select IT Automation
+1. Enter Name: Restart Print Spooler
+1. Click the Installed Packages button
+1. Select provate:hornbill > Managing Windows Devices > Windows Management (...)
+1. Click Apply
+1. Set Operation to: Service - Restart
+1. Set Site Target to Server and select an Instance
+1. Set Target Device to: Inventory and select a Device
+1. Set Admin Credentials to Network Admin
+1. Click `Create`
+1. Click on a Job Name to view the Individual Child Job
+1. Click Parent Link in the Summary to Return to Parent Job
 
-Click on a Job Name to view the Individual Child Job
-
-Click Parent Link in the Summary to Return to Parent Job
-
-<!-- ![Job Properties Link](/_books/itom-config/images/job-properties-link.png)  -->
+    ![Job Properties Link](/_books/itom-config/images/job-properties-link.png)
 
 ## Job Scheduling
 The versatile Job scheduler allows you to configure an IT Automation, Discovery or Runbook Process to execute to a specified schedule. It is typically used for Jobs that require execution more than once at specific times and days, such as backups, maintenance, and reporting scripts.
@@ -231,7 +233,7 @@ The versatile Job scheduler allows you to configure an IT Automation, Discovery 
 ### Discovery
 Device discovery is a good candidate for scheduled jobs, and is usually scheduled to execute daily, following steps will guide you through process of scheduling a Windows AD discovery Job.
 
-1. Navigate to (Home > ITOM > Job Scheduling)
+1. Navigate to Home > ITOM > Job Scheduling
 1. Click the Create New button, and Select Discovery Schedule
 1. Enter the following details:
     * Name: AD Discover
@@ -246,7 +248,7 @@ Device discovery is a good candidate for scheduled jobs, and is usually schedule
 1. Ensure Next Scheduled Date and Time is set to a couple of minutes in the future
 1. Click Enable Schedule
 1. Navigate to (Home > ITOM > Job Scheduling)
- <!--   ![Scheduled Job List](/_books/itom-config/images/scheduled-job-list.png -->
+    ![Scheduled Job List](/_books/itom-config/images/scheduled-job-list.png)
 1. Wait for the Job schedule Time, and Click on the AD Discovery Job Name
 1. Click the Job History
 1. Click on the Scheduled AD Discover Name
@@ -257,7 +259,7 @@ IT Automation jobs can be scheduled to execute any package operation and are mos
 #### Windows Disk Cleanup
 The Windows Disk Cleanup package is commonly used on a regular basis to clear down temporary files, unused system files and various other files from a Windows computer. The following will guide you through the process of setting up a schedule to execute the package operation on a weekly basis.
 
-1. Navigate to (Home > ITOM > Job Scheduling)
+1. Navigate to Home > ITOM > Job Scheduling
 1. Click the Create New button, and Select IT Automation Schedule
 1. Enter the following Schedule details:
     * Name: Windows Disk Cleanup
@@ -276,10 +278,10 @@ The Windows Disk Cleanup package is commonly used on a regular basis to clear do
 1. Wait for the Job schedule Time, and Click on the Job Name: Windows Disk Cleanup
 1. Click Job History
 
- <!--   ![Schedule Job History](/_books/itom-config/images/scheduled-job-history.png) -->
+    ![Schedule Job History](/_books/itom-config/images/scheduled-job-history.png)
 1. Click on the Job Name: Windows Disk Cleanup (with the highest Job Id)
 
- <!--   ![Scheduld Job Properteis](/_books/itom-config/images/scheduled-job-properties.png) -->
+    ![Scheduld Job Properteis](/_books/itom-config/images/scheduled-job-properties.png)
 1. Review the list of jobs, and confirm that all are successful
 1. Click on the Name of any Job entry in the list and review the Details
 1. To return to the parent Click the link shown in the Summary section
