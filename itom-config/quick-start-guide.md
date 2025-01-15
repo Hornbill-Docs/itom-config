@@ -88,7 +88,7 @@ Once you have created the OS Accounts with the required rights and permissions t
 1. Click the `Create New Key` button.
 1. Select Type as Username + Password.
     :::info
-    Ensure that the KeySafe type is Username + Password and not Username + Password + Pre-Shared Key, as the entry will not be visible within ITOM. SSH Private Key entry can also be used for devices that utilise ssh and public key authentication has been configured.
+    Ensure that the KeySafe type is Username + Password and not Username + Password + Pre-Shared Key, as the entry will not be visible within ITOM. SSH Private Key entry can also be used for devices that utilize ssh and public key authentication has been configured.
     :::
 
     ![Key Safe User Password Form](/_books/itom-config/images/key-safe-user-password-form.png)
@@ -165,7 +165,7 @@ The packages that are available will depend on your subscription, all Windows Ma
 1. Navigate to (Home > ITOM > Installed Packages)
 1. Click the Package Library PackageLibraryButton.png button
 
-![Package Libarary](/_books/itom-config/images/package-library-list.png)
+<!-- ![Package Libarary](/_books/itom-config/images/package-library-list.png) -->
 1. Click Install on both the Active Directory Group and User Management packages
 1. Click Install on Windows Disk Cleanup
 1. Click Close
@@ -195,11 +195,11 @@ The following steps will guide you through the process of configuring and execut
     * Name  : Andy Smith
 1. Click Create
 
-![Monitor-AD User Creation](/_books/itom-config/images/monitor-ad-create-user.png)
+<!-- ![Monitor-AD User Creation](/_books/itom-config/images/monitor-ad-create-user.png) -->
 
 The monitor tab shows the raw output from the job; you will see the last entry is "The job was executed successfully". However, that only confirms that the process executed and not if the action successfully created the user. The information showing the outcome of the create operation will be within the block of text output in white and will vary depending on the package. In this example, the text {{SISJobOutputParameterStart:outcome}}OK{{SISJobOutputParameterEnd}} shows that the outcome was successful and the action created the user. In many cases, it may difficult to locate the relevant output parameters to identify the outcome. In these cases, the Package Details section provides a list of both input and output parameters in a user-friendly manner:
 
-![Job Package Details](/_books/itom-config/images/job-package-details.png)
+<!-- ![Job Package Details](/_books/itom-config/images/job-package-details.png) -->
 
 ### Multiple Computers
 You can perform a package operation across several devices using a single Job when the target is specified using an Inventory List. The list must already exist and populated with one or more devices; they are created and managed via the ITOM Inventory. The following steps will guide you through the process of configuring an IT Automation that executes an action from the Windows Management package to restart the print service on multiple Windows devices.
@@ -221,7 +221,7 @@ Click on a Job Name to view the Individual Child Job
 
 Click Parent Link in the Summary to Return to Parent Job
 
-![Job Properties Link](/_books/itom-config/images/job-properties-link.png)
+<!-- ![Job Properties Link](/_books/itom-config/images/job-properties-link.png)  -->
 
 ## Job Scheduling
 The versatile Job scheduler allows you to configure an IT Automation, Discovery or Runbook Process to execute to a specified schedule. It is typically used for Jobs that require execution more than once at specific times and days, such as backups, maintenance, and reporting scripts.
@@ -246,7 +246,7 @@ Device discovery is a good candidate for scheduled jobs, and is usually schedule
 1. Ensure Next Scheduled Date and Time is set to a couple of minutes in the future
 1. Click Enable Schedule
 1. Navigate to (Home > ITOM > Job Scheduling)
-    ![Scheduled Job List](/_books/itom-config/images/scheduled-job-list.png
+ <!--   ![Scheduled Job List](/_books/itom-config/images/scheduled-job-list.png -->
 1. Wait for the Job schedule Time, and Click on the AD Discovery Job Name
 1. Click the Job History
 1. Click on the Scheduled AD Discover Name
@@ -276,10 +276,10 @@ The Windows Disk Cleanup package is commonly used on a regular basis to clear do
 1. Wait for the Job schedule Time, and Click on the Job Name: Windows Disk Cleanup
 1. Click Job History
 
-    ![Schedule Job History](/_books/itom-config/images/scheduled-job-history.png)
+ <!--   ![Schedule Job History](/_books/itom-config/images/scheduled-job-history.png) -->
 1. Click on the Job Name: Windows Disk Cleanup (with the highest Job Id)
 
-    ![Scheduld Job Properteis](/_books/itom-config/images/scheduled-job-properties.png)
+ <!--   ![Scheduld Job Properteis](/_books/itom-config/images/scheduled-job-properties.png) -->
 1. Review the list of jobs, and confirm that all are successful
 1. Click on the Name of any Job entry in the list and review the Details
 1. To return to the parent Click the link shown in the Summary section
