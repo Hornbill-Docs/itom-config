@@ -34,7 +34,7 @@ The SIS is self-updating; it automatically detects if a new service or package v
 
 ### System requirements
 
-- OS: Windows Server 2012, 2012 R2, 2016, 2019 or 2022
+- OS: Windows Server 2012, 2012 R2, 2016, 2019, 2022 or 2025
 
 - RAM: 4GB
 - Free Disk Space: 10GB
@@ -127,8 +127,8 @@ The discovery process will make use of ICMP (TCP Ping) during the discovery proc
     :::note
     The authorization code is valid for 1 hour. Should the SIS connector and SIS installation not be paired during this time, the key will expire. To generate a new key, remove the SIS connector and recreate it.
     :::
-1. Follow the instructions to [download and install the SIS](/configuration/site-integration-services/downloading-and-installing-the-sis).
-1. Follow the instructions to [pair your SIS with your Hornbill instance](/configuration/site-integration-services/pairing-an-sis-server-with-a-hornbill-instance). If you choose not to complete the pairing at this time, you can find the connector by filtering on Not Paired in your list of SIS connectors.
+1. Follow the instructions to [download and install the SIS](/itom-config/configuration/site-integration-services#downloading-and-installing-the-sis).
+1. Follow the instructions to [pair your SIS with your Hornbill instance](/itom-config/configuration/site-integration-services#pairing-an-sis-server-with-a-hornbill-instance). If you choose not to complete the pairing at this time, you can find the connector by filtering on Not Paired in your list of SIS connectors.
 
 ## Downloading and installing the SIS
 
@@ -149,15 +149,15 @@ The Hornbill SIS is installed as a Windows service and will require local admini
 
 ## Pairing an SIS server with a Hornbill instance
 
-Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which requires the authorization code created in [Creating an SIS profile on the Hornbill instance](/configuration/site-integration-services/creating-an-sis-service-profile-on-the-hornbill-instance).
+Once the EspSisService is running, the process of pairing the service with a Hornbill instance can begin, which requires the authorization code created in [Creating an SIS profile on the Hornbill instance](/itom-config/configuration/site-integration-services#creating-an-sis-profile-on-the-hornbill-instance).
 
 **To pair an SIS server:**
 
-1. Open a browser window on the computer where the SIS server is installed, and go to the URL <http://localhost:11117>. Here you will be presented with a form to enter the Instance ID and an authorization code needed to pair with your instance.
+1. Open a browser window on the computer where the SIS server is installed, and go to the URL `http://localhost:11117`. Here you will be presented with a form to enter the Instance ID and an authorization code needed to pair with your instance.
 1. Enter the Instance ID and authorization code.
 1. Click **Pair with Instance**.
 
-Once the SIS is paired with our Hornbill instance, you can review the SIS status is on <http://localhost:11117>.
+Once the SIS is paired with our Hornbill instance, you can review the SIS status is on `http://localhost:11117`.
 
 ## Grouping SIS servers
 
@@ -197,4 +197,3 @@ The removal of the SIS server software from your server(s) requires manual steps
     These steps will perform a recursive delete on the two folders specified.
     :::
 1. Once the service is removed, delete the SIS entry on the instance.
-<!-- https://wiki.hornbill.com/index.php?title=Site_Integration_Services -->
