@@ -15,7 +15,7 @@ Removing a user from this list does not remove any assigned ITOM roles or rights
 
 ## Advanced
 
-The following platform setting will automatically add a user to this list when they have been assigned a ITOM role or right. 
+The following platform setting will automatically add a user to this list when they have been assigned an ITOM role or right. 
 |Setting|Description|Default|
 |-|-|-|
 |subscription.application.allocateOnLogin|When set to 'true' a user that has been granted rights to an application will automatically be granted an application subscription when a free subscription for that application is available.|ON|

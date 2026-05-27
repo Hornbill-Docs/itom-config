@@ -2,7 +2,7 @@
 
 Hornbill's Site Integration Service (SIS) is a software package installed on a computer that sits behind an organization's firewall. It runs as a standard Windows service and, once paired with a Hornbill instance, the instance will make the Site Integration Server instance available for servicing the ITOM Job Queue.
 
-When pairing a Site Integration Server with a Hornbill instance, you are creating a trust relationship between the SIS and your Hornbill instance. Once a trust relationship is established, there is an implicit bond made between your Hornbill instance and that SIS instance, ensuring that access to the SIS capabilities to execute integrations and automation jobs can only by orchestrated by your instance.
+When pairing a Site Integration Server with a Hornbill instance, you are creating a trust relationship between the SIS and your Hornbill instance. Once a trust relationship is established, there is an implicit bond made between your Hornbill instance and that SIS instance, ensuring that access to the SIS capabilities to execute integrations and automation jobs can only be orchestrated by your instance.
 
 ## Topics covered
 
@@ -62,7 +62,7 @@ Individual packages you deploy may have additional OS requirements.
 
 ### Firewall configuration
 
-A Windows firewall rule for inbound traffic (local network traffic only) that allows any TCP traffic into the SIS is created on installation and named as follow:
+A Windows firewall rule for inbound traffic (local network traffic only) that allows any TCP traffic into the SIS is created on installation and named as follows:
 
 - Hornbill SIS Server - Context Callback (TCP - In).
 
@@ -157,7 +157,7 @@ Once the EspSisService is running, the process of pairing the service with a Hor
 1. Enter the Instance ID and authorization code.
 1. Click **Pair with Instance**.
 
-Once the SIS is paired with our Hornbill instance, you can review the SIS status is on `http://localhost:11117`.
+Once the SIS is paired with our Hornbill instance, you can review the SIS status on `http://localhost:11117`.
 
 ## Grouping SIS servers
 

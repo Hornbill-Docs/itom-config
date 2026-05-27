@@ -26,7 +26,7 @@ First setup an SIS connector and generate the Authorization key required for the
 1. From the ITOM page select Site Integration Services.
 1. Click the “Add SIS connector” button.
 1. Enter your required details:
-    * Name - Unique identifer for the SIS Connector.
+    * Name - Unique identifier for the SIS Connector.
     * Group - The default group can be used.
 1. Click the Create Site Integration Service button.
 
@@ -36,7 +36,7 @@ First setup an SIS connector and generate the Authorization key required for the
 1. Select the Not Paired filter.
 
 :::info
-The Authorization Key is temporary and will expire after 1 hour. Once expired, the the SIS record will need recreating.
+The Authorization Key is temporary and will expire after 1 hour. Once expired, the SIS record will need recreating.
 :::
 
 ### Download and Installation of the SIS
@@ -147,7 +147,7 @@ Setting devices as Managed individually is not always desirable, a more efficien
     ![Select All Inventory](/_books/itom-config/images/select-all-inventory.png)
 
     Individual devices can be selected / deselected by clicking the check box adjacent to each entry.
-1. Click the The Set As Managed button on the toolbar.
+1. Click the Set As Managed button on the toolbar.
 1. Click `Yes` to confirm.
 1. Select All Managed Inventory
 
@@ -157,7 +157,7 @@ Setting devices as Managed individually is not always desirable, a more efficien
 ![Managed Inventory Properties](/_books/itom-config/images/managed-inventory-properties.png)
 
 ## Installed Packages
-Before any IT Automations can be configured, the required packages will need to be available and listed in the Installed Packages list. There are few ways for Packages to be installed depending on your subscription, including manually uploading or creating your own package from scratch. The Package Library is a more convenient method and contains several packages produced and supported by Hornbill, from which you can install, update or remove.
+Before any IT Automations can be configured, the required packages will need to be available and listed in the Installed Packages list. There are a few ways for Packages to be installed depending on your subscription, including manually uploading or creating your own package from scratch. The Package Library is a more convenient method and contains several packages produced and supported by Hornbill, from which you can install, update or remove.
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/44fX9QyMRYw" title="Quick Guide Managing Installed Packages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -178,7 +178,7 @@ Once packages have been installed, IT Automation jobs can execute specific actio
 <iframe width="400" height="225" src="https://www.youtube.com/embed/t4MiS0USsB4" title="Quick Guide IT Automation Job" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Single Computer
-The following steps will guide you through the process of configuring and executing a IT Automation Job to execute an action from the Windows AD Managemnet package to create a new user within an Active Directory Domain.
+The following steps will guide you through the process of configuring and executing an IT Automation Job to execute an action from the Windows AD Management package to create a new user within an Active Directory Domain.
 1. Navigate to (Home > ITOM > Job Queue)
 1. Click the Create New button, and select IT Automation
 1. Enter Name: Create User: Andy Smith
@@ -201,19 +201,19 @@ The monitor tab shows the raw output from the job. The last entry will display "
 
 ![Monitor-AD User Creation](/_books/itom-config/images/monitor-ad-create-user.png)
 
-The information showing the outcome of the create operation will be within the block of text output in white and will vary depending on the package. In this example, the text {{SISJobOutputParameterStart:outcome}}OK{{SISJobOutputParameterEnd}} shows that the outcome was successful and the action created the user. In many cases, it may difficult to locate the relevant output parameters to identify the outcome. In these cases, the Package Details section provides a list of both input and output parameters in a user-friendly manner:
+The information showing the outcome of the create operation will be within the block of text output in white and will vary depending on the package. In this example, the text {{SISJobOutputParameterStart:outcome}}OK{{SISJobOutputParameterEnd}} shows that the outcome was successful and the action created the user. In many cases, it may be difficult to locate the relevant output parameters to identify the outcome. In these cases, the Package Details section provides a list of both input and output parameters in a user-friendly manner:
 
 ![Job Package Details](/_books/itom-config/images/job-package-details.png)
 
 ### Multiple Computers
-You can perform a package operation across several devices using a single Job when the target is specified using an Inventory List. The list must already exist and populated with one or more devices; they are created and managed via the ITOM Inventory. The following steps will guide you through the process of configuring an IT Automation that executes an action from the Windows Management package to restart the print service on multiple Windows devices.
+You can perform a package operation across several devices using a single Job when the target is specified using an Inventory List. The list must already exist and be populated with one or more devices; they are created and managed via the ITOM Inventory. The following steps will guide you through the process of configuring an IT Automation that executes an action from the Windows Management package to restart the print service on multiple Windows devices.
 
 1. Navigate to (Home > ITOM > Job Queue)
     ![Job Queue](/_books/itom-config/images/job-queue.png)
 1. Click the `Create New` button, and select IT Automation
 1. Enter Name: Restart Print Spooler
 1. Click the Installed Packages button
-1. Select provate:hornbill > Managing Windows Devices > Windows Management (...)
+1. Select private:hornbill > Managing Windows Devices > Windows Management (...)
 1. Click Apply
 1. Set Operation to: Service - Restart
 1. Set Site Target to Server and select an Instance
@@ -231,7 +231,7 @@ The versatile Job scheduler allows you to configure an IT Automation, Discovery 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/KeC5KNmQajg" title="Quick Guide Job Scheduling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Discovery
-Device discovery is a good candidate for scheduled jobs, and is usually scheduled to execute daily, following steps will guide you through process of scheduling a Windows AD discovery Job.
+Device discovery is a good candidate for scheduled jobs, and is usually scheduled to execute daily. The following steps will guide you through the process of scheduling a Windows AD discovery Job.
 
 1. Navigate to Home > ITOM > Job Scheduling
 1. Click the Create New button, and Select Discovery Schedule
@@ -281,7 +281,7 @@ The Windows Disk Cleanup package is commonly used on a regular basis to clear do
     ![Schedule Job History](/_books/itom-config/images/scheduled-job-history.png)
 1. Click on the Job Name: Windows Disk Cleanup (with the highest Job Id)
 
-    ![Scheduld Job Properteis](/_books/itom-config/images/scheduled-job-properties.png)
+    ![Scheduled Job Properties](/_books/itom-config/images/scheduled-job-properties.png)
 1. Review the list of jobs, and confirm that all are successful
 1. Click on the Name of any Job entry in the list and review the Details
 1. To return to the parent Click the link shown in the Summary section
